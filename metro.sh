@@ -33,7 +33,7 @@ clear
 THREAD="-j12"
 KERNEL="zImage"
 DTBIMAGE="dtb"
-DEFCONFIG="msm8926-nx404h_defconfig"
+DEFCONFIG="msm8926-ne501j_defconfig"
 device="nx404h"
 
 # Kernel Details
@@ -42,14 +42,14 @@ VER="v3"
 METRO_VER="$BASE_METRO_VER$VER"
 
 # Vars
-export CROSS_COMPILE="/home/sattarvoybek/kernel/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-"
+export CROSS_COMPILE="/home/sattarvoybek/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-"
 export ARCH=arm
 export SUBARCH=arm
 export KBUILD_BUILD_USER="Sattarvoybek"
 export KBUILD_BUILD_HOST="nx404h"
 # Paths
 #STRIP=/toolchain-path/arm-eabi-strip
-STRIP=/home/sattarvoybek/kernel/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-strip
+STRIP=/home/sattarvoybek/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-strip
 KERNEL_DIR=`pwd`
 REPACK_DIR="$KERNEL_DIR/zip/kernel_zip"
 PATCH_DIR="$KERNEL_DIR/zip/kernel_zip/patch"
