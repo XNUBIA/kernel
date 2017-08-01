@@ -46,7 +46,7 @@ export CROSS_COMPILE="/home/sattarvoybek/xnubia/arm-linux-androideabi-4.9/bin/ar
 export ARCH=arm
 export SUBARCH=arm
 export KBUILD_BUILD_USER="Sattarvoybek"
-export KBUILD_BUILD_HOST="nx404h"
+export KBUILD_BUILD_HOST="MSM8226"
 # Paths
 #STRIP=/toolchain-path/arm-eabi-strip
 STRIP=/home/sattarvoybek/xnubia/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-strip
@@ -62,6 +62,13 @@ function make_dtb {
 }
 function clean_all {
 		make clean && make mrproper
+}
+
+function make_kernel {
+		echo
+		make $DEFCONFIG
+		make $THREAD
+		cp -vr $ZIMAGE_DIR/$KERNEL $REPACK_DIR/zImage
 }
 
 DATE_START=$(date +"%s")
