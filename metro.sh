@@ -64,13 +64,6 @@ function clean_all {
 		make clean && make mrproper
 }
 
-function make_kernel {
-		echo
-		make $DEFCONFIG
-		make $THREAD
-		cp -vr $ZIMAGE_DIR/$KERNEL $REPACK_DIR/zImage
-}
-
 DATE_START=$(date +"%s")
 
 echo -e "${bldred}"; echo -e "${blink_red}"; echo "$AK_VER"; echo -e "${restore}";
